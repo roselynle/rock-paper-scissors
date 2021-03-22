@@ -105,3 +105,27 @@ h1 {
     color: var(--primary-color);
     font-size: 10em;
 }
+
+@media (max-width: 650px) {
+    .choice {
+        font-size: 110px;
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+    #intro {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .choice {
+        font-size: 80px;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    #intro {
+        font-size: 1rem;
+    }
+}
