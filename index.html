@@ -7,6 +7,7 @@
             src="https://kit.fontawesome.com/2021b518c4.js"
             crossorigin="anonymous"
         ></script>
+        <script src="assets/js/script.js"></script>
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
         <link rel="stylesheet" type="text/css" href="assets/css/modal.css" />
         <title>Rock Paper Scissors</title>
@@ -14,7 +15,11 @@
     <body>
         <div class="container">
             <header class="header">
-                <h1>Rock. Paper. Scissors.</h1>
+                <h1>
+                    <span style="color: #f26651">Rock. </span>
+                    <span style="color: #64bcba">Paper. </span>
+                    <span style="color: #f6bd4a">Scissors.</span>
+                </h1>
                 <button id="restart" class="restart-btn">Restart Game</button>
                 <div id="score" class="score">
                     <p>Player: 0</p>
@@ -36,6 +41,5 @@
         <div class="modal">
             <div id="result" class="modal-content"></div>
         </div>
-        <script src="assets/js/script.js"></script>
     </body>
 </html>
