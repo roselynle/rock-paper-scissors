@@ -11,6 +11,9 @@
 }
 
 body {
+    background: url(../images/rock-paper-scissors-background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
     color: var(--dark-color);
     font-family: "Roboto", sans-serif;
 }
