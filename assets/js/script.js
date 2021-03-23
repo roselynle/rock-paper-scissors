@@ -1,6 +1,7 @@
 const choices = document.querySelectorAll(".choice");
 const score = document.getElementById("score");
 const result = document.getElementById("result");
+const restart = document.getElementById("restart");
 const modal = document.querySelector(".modal");
 const scoreboard = {
     player: 0,
@@ -9,6 +10,15 @@ const scoreboard = {
 
 // Event listener for player choice
 choices.forEach((choice) => choice.addEventListener("click", play));
+
+// Play game
+function play(event) {
+    const playerChoice = event.target.id;
+    const computerChoice = computerPlay();
+    const winner = playRound(playerChoice, computerChoice);
+    announceWinner(winner, computerChoice);
+    final();
+}
 
 // Get computers choice
 function computerPlay() {
@@ -78,6 +88,51 @@ function announceWinner(winner, computerChoice) {
   <p>Computer: ${scoreboard.computer}</p>`;
 
     modal.style.display = "block";
+}
+
+// Final result after 5 rounds
+function final() {
+    if (scoreboard.player === 5) {
+        result.innerHTML = `
+          <h1>You've scored 5 </br> &</h1>
+          <h1 class="text-win >won the Game</h1>
+          <button id="restart" class="restart-btn-modal" value="Reload Page" onClick="document.location.reload(true)">Restart Session</button>
+      `;
+        window.addEventListener("click", stickModal);
+        function stickModal(x) {
+            if (x.target === modal) {
+                modal.style.display = "block";
+            }
+        }
+    } else if (scoreboard.computer === 5) {
+        result.innerHTML = `
+          <h1>Computer Won the Session<br>
+          Better luck next time!</h1>
+          <button id="restart" class="restart-btn-modal" value="Reload Page" onClick="document.location.reload(true)">Restart Session</button>
+      `;
+        window.addEventListener("click", stickModal);
+        function stickModal(x) {
+            if (x.target === modal) {
+                modal.style.display = "block";
+            }
+        }
+    }
+}
+
+window.addEventListener("click", clearModal); // allows user to click on the window after the game to get rid of the modal
+
+// Clear modal
+function clearModal(e) {
+    if (e.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Close Modal
+function closeModal(e) {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
 }
 
 restart.addEventListener("click", restartGame);
