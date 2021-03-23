@@ -22,7 +22,7 @@
     background: white;
     text-align: center;
     margin: 10% auto;
-    width: 350px;
+    width: 250px;
     border-radius: 10px;
     padding: 3rem;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
@@ -30,7 +30,11 @@
     animation-duration: var(--modal-duration);
 }
 
-.modal-content h1 {
+.modal-content h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 900;
     margin-bottom: 1rem;
 }
 
@@ -46,21 +50,41 @@
 .text-lose {
     color: var(--lose-color);
 }
-.restart-btn-modal {
-    background: var(--light-color);
-    padding: 0.4rem 1.3rem;
-    border: 1px;
-    border-radius: 5px;
-    outline: none;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
+
+.final-text-win {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 900;
     margin-bottom: 1rem;
+    color: var(--win-color);
+    padding-bottom: 2rem;
+}
+
+.final-text-lose {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--lose-color);
+    padding-bottom: 2rem;
+}
+
+.restart-btn-modal {
+    background: var(white);
+    border: 1px solid var(--dark-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 2.2rem;
+    outline: none;
+    padding: 0.4rem 1.3rem;
 }
 
 .restart-btn-modal:hover {
-    background: var(--dark-color);
-    color: #fff;
+    background: var(--light-color);
+    color: white;
 }
 
 @keyframes modalopen {

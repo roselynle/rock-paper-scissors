@@ -58,8 +58,8 @@ function announceWinner(winner, computerChoice) {
         // Increment player score
         scoreboard.player++;
         // Show modal result
-        result.innerHTML = `<h1 class="text-win">You Win</h1>
-      <i class="fas fa-hand-${computerChoice} fa-8x"></i>
+        result.innerHTML = `<h2 class="text-win">You Win</h2>
+      <i class="fas fa-hand-${computerChoice} fa-7x"></i>
       <p>Computer Chose <b>${
           computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)
       }</b></p>`;
@@ -71,14 +71,14 @@ function announceWinner(winner, computerChoice) {
         // Increment computer score
         scoreboard.computer++;
         // Show modal result
-        result.innerHTML = `<h1 class="text-lose">You Lose</h1>
-      <i class="fas fa-hand-${computerChoice} fa-8x"></i>
+        result.innerHTML = `<h2 class="text-lose">You Lose</h2>
+      <i class="fas fa-hand-${computerChoice} fa-7x"></i>
       <p>Computer Chose <b>${
           computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)
       }</b></p>`;
     } else {
-        result.innerHTML = `<h1>It's a Draw</h1>
-      <i class="fas fa-hand-${computerChoice} fa-8x"></i>
+        result.innerHTML = `<h2>It's a Draw</h2>
+      <i class="fas fa-hand-${computerChoice} fa-7x"></i>
       <p>Computer Chose <b>${
           computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)
       }</b></p>`;
@@ -94,8 +94,7 @@ function announceWinner(winner, computerChoice) {
 function final() {
     if (scoreboard.player === 5) {
         result.innerHTML = `
-          <h1>You've scored 5 </br> &</h1>
-          <h1 class="text-win >won the Game</h1>
+          <h3 class="final-text-win">You scored 5 and won the session.<br><br> Congrats!</h3>
           <button id="restart" class="restart-btn-modal" value="Reload Page" onClick="document.location.reload(true)">Restart Session</button>
       `;
         window.addEventListener("click", stickModal);
@@ -106,8 +105,7 @@ function final() {
         }
     } else if (scoreboard.computer === 5) {
         result.innerHTML = `
-          <h1>Computer Won the Session<br>
-          Better luck next time!</h1>
+          <h3 class="final-text-lose">Computer won the session.<br><br> Better luck next time!</h3>
           <button id="restart" class="restart-btn-modal" value="Reload Page" onClick="document.location.reload(true)">Restart Session</button>
       `;
         window.addEventListener("click", stickModal);
