@@ -119,18 +119,11 @@ function final() {
     }
 }
 
-window.addEventListener("click", clearModal); // allows user to click on the window after the game to get rid of the modal
+window.addEventListener("click", clearModal);
 
 // Clear modal
 function clearModal(e) {
     if (e.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-// Close Modal
-function closeModal(e) {
-    if (e.target === modal) {
         modal.style.display = "none";
     }
 }
