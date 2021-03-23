@@ -8,9 +8,6 @@ const scoreboard = {
     computer: 0,
 };
 
-// Event listener for player choice
-choices.forEach((choice) => choice.addEventListener("click", play));
-
 // Play game
 function play(event) {
     const playerChoice = event.target.id;
@@ -117,16 +114,12 @@ function final() {
     }
 }
 
-window.addEventListener("click", clearModal);
-
 // Clear modal
 function clearModal(e) {
     if (e.target == modal) {
         modal.style.display = "none";
     }
 }
-
-restart.addEventListener("click", restartGame);
 
 // Restart game
 function restartGame() {
@@ -135,3 +128,12 @@ function restartGame() {
     score.innerHTML = `<p>Player: 0</p>
   <p>Computer: 0</p>`;
 }
+
+module.exports = {
+    play,
+    computerPlay,
+    playRound,
+    restartGame,
+    clearModal,
+    announceWinner,
+};
