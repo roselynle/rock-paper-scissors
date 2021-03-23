@@ -80,6 +80,8 @@ function announceWinner(winner, computerChoice) {
     modal.style.display = "block";
 }
 
+restart.addEventListener("click", restartGame);
+
 // Restart game
 function restartGame() {
     scoreboard.player = 0;
