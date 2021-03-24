@@ -1,6 +1,5 @@
 :root {
-    --dark-color: #6e5656;
-    --light-color: #8d8686;
+    --dark-color: #601154;
     --lose-color: #dc3545;
     --win-color: #28a745;
     --modal-duration: 1s;
@@ -31,7 +30,7 @@
 }
 
 .modal-content h2 {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Patrick Hand", cursive;
     font-size: 4rem;
     font-style: italic;
     font-weight: 900;
@@ -41,6 +40,10 @@
 .modal-content p {
     font-size: 1.2rem;
     margin-top: 1rem;
+}
+
+.modalIcon {
+    width: 9rem;
 }
 
 .text-win {

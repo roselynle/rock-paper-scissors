@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&family=Patrick+Hand&display=swap");
 
 :root {
-    --dark-color: #6e5656;
+    --dark-color: #601154;
     --light-color: #8d8686;
 }
 
@@ -10,24 +10,38 @@
     margin: 0;
 }
 
+.container {
+    background-color: rgba(238, 232, 244, 0.957);
+    height: 40rem;
+    margin: 0 auto;
+    width: 48rem;
+    border-radius: 2rem;
+    box-shadow: 2px 2px 2px var(--dark-color);
+}
+
+.header {
+    width: 100%;
+    margin: 0 auto;
+}
+
 body {
-    background: url(../images/rock-paper-scissors-background.jpg);
-    background-repeat: no-repeat;
-    background-size: 100vw 100vh;
+    background: #a695b7a7;
     color: var(--dark-color);
-    font-family: "Roboto", sans-serif;
+    font-family: "Josefin Slab", serif;
+    padding-top: 3rem;
 }
 
 h1 {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Patrick Hand", cursive;
     font-size: 6rem;
-    font-style: italic;
-    font-weight: 900;
+    font-weight: 800;
+    text-shadow: 2px 2px 2px var(--dark-color);
+    padding-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 #intro {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
 }
 
 .container {
@@ -43,14 +57,16 @@ h1 {
     border: 1px solid var(--dark-color);
     border-radius: 0.5rem;
     cursor: pointer;
-    font-size: 1rem;
-    margin-bottom: 2.2rem;
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
     outline: none;
     padding: 0.4rem 1.3rem;
+    font-family: "Josefin Slab", serif;
+    color: var(--dark-color);
 }
 
 .restart-btn:hover {
-    background: var(--light-color);
+    background: var(--dark-color);
     color: white;
 }
 
@@ -64,17 +80,18 @@ h1 {
 }
 
 .score {
-    color: var(--light-color);
+    color: var(--dark-color);
     display: grid;
     font-size: 1.2rem;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3.5rem;
-    margin-bottom: 2rem;
+    grid-template-columns: repeat(2, 18rem);
+    grid-gap: 4rem;
+    justify-content: center;
+    margin-bottom: 3rem;
 }
 
 /* player score */
 .score p:first-child {
-    background: var(--light-color);
+    background: var(--dark-color);
     border-radius: 0.5rem;
     color: white;
     padding: 0.4rem;
@@ -82,50 +99,91 @@ h1 {
 
 /* computer score */
 .score p:last-child {
-    background: var(--light-color);
+    background: var(--dark-color);
     border-radius: 0.5rem;
     color: white;
     padding: 0.4rem;
 }
 
 .choices {
-    color: var(--dark-color);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
-    margin-top: 3.5rem;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
 }
 
 .choice {
     cursor: pointer;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    max-width: 8.5rem;
 }
 
-.choice:hover {
-    color: var(--primary-color);
-    font-size: 10em;
+#rock:hover {
+    max-width: 9.5rem;
+    background-color: black;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 1024px) {
     .choice {
         font-size: 110px;
     }
     h1 {
-        font-size: 3.5rem;
+        font-size: 7.5rem;
+        padding-bottom: 5rem;
     }
-    #intro {
-        font-size: 1.5rem;
+    .container {
+        height: 78rem;
+        margin: 0 auto;
+        width: 36rem;
+        border-radius: 2rem;
+    }
+
+    .header {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .restart-btn {
+        margin-bottom: 5rem;
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
+    .choice {
+        font-size: 100px;
+    }
+    h1 {
+        font-size: 5rem;
+        width: 100%;
+        padding-bottom: 5rem;
+    }
+    .header {
+        width: 100%;
+    }
+    #intro {
+        font-size: 1.2rem;
+    }
+
+    .score {
+        font-size: 1rem;
+        grid-template-columns: repeat(2, 12rem);
+    }
+}
+
+@media (max-width: 414px) {
     .choice {
         font-size: 80px;
     }
     h1 {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
+        width: 100vw;
     }
     #intro {
         font-size: 1rem;
+    }
+    .score {
+        font-size: 1rem;
+        grid-template-columns: repeat(2, 8rem);
     }
 }

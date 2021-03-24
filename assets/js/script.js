@@ -56,7 +56,8 @@ function announceWinner(winner, computerChoice) {
         scoreboard.player++;
         // Show modal result
         result.innerHTML = `<h2 class="text-win">You Win</h2>
-      <i class="fas fa-hand-${computerChoice} fa-7x"></i>
+        <img class="modalIcon"
+        src="assets/images/${computerChoice}.png"/>
       <p>Computer Chose <b>${
           computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)
       }</b></p>`;
@@ -69,13 +70,15 @@ function announceWinner(winner, computerChoice) {
         scoreboard.computer++;
         // Show modal result
         result.innerHTML = `<h2 class="text-lose">You Lose</h2>
-      <i class="fas fa-hand-${computerChoice} fa-7x"></i>
+        <img class="modalIcon"
+        src="assets/images/${computerChoice}.png"/>
       <p>Computer Chose <b>${
           computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)
       }</b></p>`;
     } else {
         result.innerHTML = `<h2>It's a Draw</h2>
-      <i class="fas fa-hand-${computerChoice} fa-7x"></i>
+        <img class="modalIcon"
+        src="assets/images/${computerChoice}.png"/>
       <p>Computer Chose <b>${
           computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)
       }</b></p>`;
