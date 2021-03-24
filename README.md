@@ -37,8 +37,8 @@ The game is played against the computer. Whoever achieves five points first, win
 ### Challenges
 
 -   Managed to test some of the functions, however there were difficulties testing some of the complicated functions due to error messages in the test suite.
--   Responsiveness could be improved
+-   Responsiveness could be improved, not responsive on small screens (e.g. phones)
 
 ## Bugs
 
--   No known bugs
+-   Cannot play on phone, moodal will not close
