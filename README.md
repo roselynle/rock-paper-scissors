@@ -4,7 +4,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/66aafaa9-ab23-4245-971f-df73ad1472fb/deploy-status)](https://app.netlify.com/sites/rock-paper-scissors-go/deploys)
 
-[!](assets/images/rock-paper-scissors-demo.gif)
+![](assets/images/rock-paper-scissors-demo.gif)
 
 Simple implementation of Rock Paper Scissors game from The Odin Project [curriculum](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/rock-paper-scissors).
 
