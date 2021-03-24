@@ -118,13 +118,6 @@ h1 {
     max-width: 8.5rem;
 }
 
-#rock:hover {
-    max-width: 9.5rem;
-    background-color: black;
-    margin-left: 3rem;
-    margin-right: 3rem;
-}
-
 @media (max-width: 1024px) {
     .choice {
         font-size: 110px;
